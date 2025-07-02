@@ -1,0 +1,93 @@
+/* Background Styling */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ea9666, #764ba2);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Calculator Container */
+.calculator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.08); /* almost fully transparent */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border-radius: 15px;
+  padding: 30px;
+  width: 320px;
+  z-index: 2;
+  backdrop-filter: blur(18px) saturate(180%);
+  border: 1.5px solid rgba(255,255,255,0.18);
+}
+
+/* Display */
+.display {
+  background-color: rgba(255, 255, 255, 0.18); /* very transparent, but readable */
+  color: #23233b;
+  font-size: 32px;
+  padding: 15px;
+  text-align: right;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px #fff, 0 0 2px #fff;
+  border: 2px solid rgba(0,0,0,0.08);
+}
+
+/* Button Grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+/* Buttons */
+button {
+  background-color: rgba(255, 255, 255, 0.22); /* clearly transparent */
+  color: #23233b;
+  font-weight: bold;
+  border: 2px solid rgba(0,0,0,0.10);
+  text-shadow: 1px 1px 3px #fff;
+  padding: 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+button:hover {
+  background-color: rgba(255,255,255,0.35);
+}
+
+.operator {
+  background-color: rgba(255, 126, 95, 0.22);
+  color: #fff;
+}
+
+.equal {
+  background-color: rgba(86, 171, 47, 0.22);
+  color: #fff;
+  grid-column: span 2;
+}
+
+.clear {
+  background-color: rgba(231, 76, 60, 0.22);
+}
+
+/* Video container for overlay */
+.video-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
